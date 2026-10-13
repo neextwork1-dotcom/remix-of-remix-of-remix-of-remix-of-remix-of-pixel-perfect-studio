@@ -31,13 +31,13 @@ function ServiceDetail() {
                 <p className="service-page-intro">{s.intro}</p>
                 <Link to="/join-us" className="btn btn-knowme">Get Started</Link>
               </div>
-              <div className="col-md-6"><img src={tileImage(s.tiles[0])} alt={`${s.title} service`} width={1920} height={1080} loading="lazy" className="img-responsive reference-service-image" /></div>
+              <div className="col-md-6"><img src={tileImage(s.tiles[0] ?? 1)} alt={`${s.title} service`} width={1920} height={1080} loading="lazy" className="img-responsive reference-service-image" /></div>
             </div>
             <h3 className="product-heading mt-3">Key Features</h3>
             <div className="row service-page-features">
               {s.features.map(([name, text], i) => (
                 <div className="col-sm-4" key={name}>
-                  <img src={tileImage(s.tiles[i] ?? s.tiles[0])} alt={name} width={1920} height={1080} loading="lazy" className="img-responsive reference-service-image" />
+                  <img src={tileImage(s.tiles[i] ?? 1)} alt={name} width={1920} height={1080} loading="lazy" className="img-responsive reference-service-image" />
                   <h4 className="product-ingredient">{name}</h4>
                   <p>{text}</p>
                 </div>
