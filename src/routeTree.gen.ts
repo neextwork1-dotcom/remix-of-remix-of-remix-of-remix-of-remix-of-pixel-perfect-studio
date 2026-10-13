@@ -34,6 +34,7 @@ import { Route as ScientistsRouteImport } from './routes/scientists'
 import { Route as SeniorManagementRouteImport } from './routes/senior-management'
 import { Route as TripleStemcellH2oRouteImport } from './routes/triple-stemcell-h2o'
 import { Route as VideoGalleryRouteImport } from './routes/video-gallery'
+import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -160,6 +161,11 @@ const VideoGalleryRoute = VideoGalleryRouteImport.update({
   path: '/video-gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesSlugRoute = ServicesSlugRouteImport.update({
+  id: '/services/$slug',
+  path: '/services/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -187,6 +193,7 @@ export interface FileRoutesByFullPath {
   '/senior-management': typeof SeniorManagementRoute
   '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
   '/video-gallery': typeof VideoGalleryRoute
+  '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -214,6 +221,7 @@ export interface FileRoutesByTo {
   '/senior-management': typeof SeniorManagementRoute
   '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
   '/video-gallery': typeof VideoGalleryRoute
+  '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -242,6 +250,7 @@ export interface FileRoutesById {
   '/senior-management': typeof SeniorManagementRoute
   '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
   '/video-gallery': typeof VideoGalleryRoute
+  '/services/$slug': typeof ServicesSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -271,6 +280,7 @@ export interface FileRouteTypes {
     | '/senior-management'
     | '/triple-stemcell-h2o'
     | '/video-gallery'
+    | '/services/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -298,6 +308,7 @@ export interface FileRouteTypes {
     | '/senior-management'
     | '/triple-stemcell-h2o'
     | '/video-gallery'
+    | '/services/$slug'
   id:
     | '__root__'
     | '/'
@@ -325,6 +336,7 @@ export interface FileRouteTypes {
     | '/senior-management'
     | '/triple-stemcell-h2o'
     | '/video-gallery'
+    | '/services/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -353,6 +365,7 @@ export interface RootRouteChildren {
   SeniorManagementRoute: typeof SeniorManagementRoute
   TripleStemcellH2oRoute: typeof TripleStemcellH2oRoute
   VideoGalleryRoute: typeof VideoGalleryRoute
+  ServicesSlugRoute: typeof ServicesSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -532,6 +545,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VideoGalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/$slug': {
+      id: '/services/$slug'
+      path: '/services/$slug'
+      fullPath: '/services/$slug'
+      preLoaderRoute: typeof ServicesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -561,6 +581,7 @@ const rootRouteChildren: RootRouteChildren = {
   SeniorManagementRoute: SeniorManagementRoute,
   TripleStemcellH2oRoute: TripleStemcellH2oRoute,
   VideoGalleryRoute: VideoGalleryRoute,
+  ServicesSlugRoute: ServicesSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
