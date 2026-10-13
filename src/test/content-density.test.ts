@@ -1,4 +1,3 @@
-// @vitest-environment node
 import { describe, expect, it } from "vitest";
 import { htmlToDOM, Element } from "html-react-parser";
 import { collectionGroups, collectionLimit } from "@/lib/content-density";
