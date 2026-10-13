@@ -166,3 +166,4 @@
 .reference-news-events .events .card>div{padding:0 16px 16px}
 .reference-awards .awards img{aspect-ratio:1;object-fit:cover;border-radius:4px}
 .reference-site .box-ordered{row-gap:24px}
+.reference-site img.reference-service-image{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:4px}
