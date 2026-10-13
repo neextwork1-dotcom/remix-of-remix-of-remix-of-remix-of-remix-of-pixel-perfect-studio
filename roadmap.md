@@ -3,6 +3,6 @@
 - [x] Restore and individually enhance every referenced media asset; refine the primary banners.
 - [x] Verify all pages, media loading, navigation, and gallery controls.
 - [x] Report existing source limitations for sign-in and form submission.
-- [ ] Shorten excessive collections and long text across all pages without losing essential information.
-- [ ] Improve selected remaining imagery in HD, within image-tool limits.
-- [ ] Verify concise pages, expansion controls and image loading.
+- [x] Shorten excessive collections and long text across all pages without losing essential information.
+- [ ] Replace all service imagery with brand-matched HD images, prioritizing generated main-page imagery.
+- [ ] Remove superseded service assets and verify all service placements and image loading.
