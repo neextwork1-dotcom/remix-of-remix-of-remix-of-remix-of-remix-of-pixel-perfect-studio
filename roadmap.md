@@ -6,3 +6,6 @@
 - [x] Shorten excessive collections and long text across all pages without losing essential information.
 - [x] Replace all service imagery with brand-matched HD images, prioritizing generated main-page imagery.
 - [x] Remove superseded service assets and verify all service placements and image loading.
+- [ ] Match the awards reference layout while retaining Life OS branding and existing recognition data.
+- [ ] Generate and display exactly 12 branded HD award images; remove extra awards from the page.
+- [ ] Verify the awards page and image enlargement controls.
