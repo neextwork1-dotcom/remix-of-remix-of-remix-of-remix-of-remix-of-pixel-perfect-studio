@@ -4,5 +4,5 @@
 - [x] Verify all pages, media loading, navigation, and gallery controls.
 - [x] Report existing source limitations for sign-in and form submission.
 - [x] Shorten excessive collections and long text across all pages without losing essential information.
-- [ ] Replace all service imagery with brand-matched HD images, prioritizing generated main-page imagery.
-- [ ] Remove superseded service assets and verify all service placements and image loading.
+- [x] Replace all service imagery with brand-matched HD images, prioritizing generated main-page imagery.
+- [x] Remove superseded service assets and verify all service placements and image loading.
