@@ -13,3 +13,4 @@
 - Store imported media as project-owned CDN asset pointers with a source-to-destination map, so no media depends on another project's asset serving.
 - Keep the target starter runtime and package versions when importing pages, so the app remains compatible with the managed hosting environment.
 - Apply collection density rules through the shared renderer with reversible expansion, grouping complete FAQ answers and timeline entries so no source information is lost.
+- Resolve service imagery through a shared semantic service-name registry before legacy numeric fallbacks, so homepage, detail and video placements show the correct matching subject despite reused source IDs.

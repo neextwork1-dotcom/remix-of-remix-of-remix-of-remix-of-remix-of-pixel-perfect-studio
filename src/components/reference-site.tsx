@@ -4,6 +4,7 @@ import parse, { attributesToProps, domToReact, Element, type DOMNode, type HTMLR
 import { Button } from "@/components/ui/button";
 import reference from "@/lib/reference-pages.json";
 import { collectionLimit, collectionGroups } from "@/lib/content-density";
+import { serviceImage } from "@/lib/service-media";
 import bannerOne from "@/assets/refined/banner-1.jpg";
 import bannerTwo from "@/assets/refined/banner-2.jpg";
 import bannerThree from "@/assets/refined/banner-3.jpg";
@@ -20,7 +21,14 @@ for (const [path, mod] of Object.entries(hdMedia)) {
   if (match) lifeosMedia.set(`${match[1]}/${Number(match[2])}`, mod.default);
 }
 function resolveMedia(html: string): string {
-  return html.replace(/lifeos-media:\/\/([a-z]+)\/(\d{2})/g, (match, group, number) => lifeosMedia.get(`${group}/${Number(number)}`) ?? match);
+  const services = html.replace(/<img\b[^>]*>/gi, tag => {
+    const source = tag.match(/lifeos-media:\/\/services\/(\d{2})/);
+    if (!source) return tag;
+    const alt = tag.match(/\balt="([^"]*)"/)?.[1] ?? "";
+    const image = serviceImage(Number(source[1]), alt);
+    return image ? tag.replace(source[0], image) : tag;
+  });
+  return services.replace(/lifeos-media:\/\/([a-z]+)\/(\d{2})/g, (match, group, number) => group === "services" ? serviceImage(Number(number)) ?? match : lifeosMedia.get(`${group}/${Number(number)}`) ?? match);
 }
 
 export type ReferencePage = keyof typeof reference.pages;
@@ -58,7 +66,10 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       if (node.name === "script" || node.name === "style") return <></>;
       const limit = header ? undefined : collectionLimit(node);
       if (limit && collectionGroups(node).length > limit) return <CompactCollection node={node} options={options} limit={limit} />;
-      if (node.name === "img") return <img {...attributesToProps(attrs)} alt={attrs["alt"] ?? ""} loading="lazy" decoding="async" />;
+      if (node.name === "img") {
+        const service = /\/service-\d{2}[.-]/.test(attrs["src"] ?? "");
+        return <img {...attributesToProps(attrs)} className={`${cls}${service ? " reference-service-image" : ""}`} width={service ? 1920 : attrs["width"] ? Number(attrs["width"]) : undefined} height={service ? 1080 : attrs["height"] ? Number(attrs["height"]) : undefined} alt={attrs["alt"] ?? ""} loading="lazy" decoding="async" />;
+      }
       if (cls === "box" && attrs["data-toggle"] === "modal") {
         const image = node.children.find(n => n instanceof Element && n.name === "img");
         return <Button variant="reference" size="reference" className={cls} aria-label={image instanceof Element ? image.attribs["alt"] : "View certificate"} onClick={() => { if (image instanceof Element) setNotice(image.attribs["src"]); }}>{children()}</Button>;
