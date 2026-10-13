@@ -8,11 +8,11 @@ import bannerOne from "@/assets/refined/banner-1.jpg";
 import bannerTwo from "@/assets/refined/banner-2.jpg";
 import bannerThree from "@/assets/refined/banner-3.jpg";
 
-const mediaPointers = import.meta.glob<{ default: { url: string } }>("/src/assets/restored/tile-*.asset.json", { eager: true });
+const mediaPointers = import.meta.glob<{ default: string }>("/src/assets/restored/tile-*.webp", { eager: true });
 const lifeosMedia = new Map<string, string>();
 for (const [path, mod] of Object.entries(mediaPointers)) {
   const match = path.match(/tile-([a-z]+)-(\d+)\./);
-  if (match) lifeosMedia.set(`${match[1]}/${Number(match[2])}`, mod.default.url);
+  if (match) lifeosMedia.set(`${match[1]}/${Number(match[2])}`, mod.default);
 }
 const hdMedia = import.meta.glob<{ default: string }>("/src/assets/hd/tile-*.jpg", { eager: true });
 for (const [path, mod] of Object.entries(hdMedia)) {
