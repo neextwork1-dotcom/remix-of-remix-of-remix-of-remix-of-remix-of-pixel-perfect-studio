@@ -121,7 +121,7 @@ function Banner({ page }: { page: ReferencePage }) {
   return <section className="reference-banner" aria-label="Life OS highlights"><img src={slides[slide]} alt="Life OS — One Life ID. One App. Unlimited Services." /><div className="reference-pagination">{slides.map((path, i) => <Button variant="reference" size="reference" key={path} aria-label={`Go to slide ${i + 1}`} className={i === slide ? "selected" : ""} onClick={() => setSlide(i)}>{String(i + 1).padStart(2, "0")}</Button>)}</div></section>;
 }
 
-export function ReferenceSite({ page }: { page: ReferencePage }) {
+export function ReferenceSite({ page, content }: { page: ReferencePage; content?: React.ReactNode }) {
   const product = ["triple-stemcell-h2o", "double-stemcell", "crystal-cell"].includes(page);
-  return <div className={`reference-site reference-${page} ${product ? "reference-product" : ""}`}><ReferenceMarkup html={reference.header} header />{!product && <Banner key={page} page={page} />}<main><ReferenceMarkup key={page} html={reference.pages[page].html} /></main><ReferenceMarkup html={reference.footer} /><Button variant="reference" size="reference" className="ui-to-top fa fa-arrow-up active" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} /></div>;
+  return <div className={`reference-site reference-${page} ${product ? "reference-product" : ""}`}><ReferenceMarkup html={reference.header} header />{!product && <Banner key={page} page={page} />}<main>{content ?? <ReferenceMarkup key={page} html={reference.pages[page].html} />}</main><ReferenceMarkup html={reference.footer} /><Button variant="reference" size="reference" className="ui-to-top fa fa-arrow-up active" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} /></div>;
 }
