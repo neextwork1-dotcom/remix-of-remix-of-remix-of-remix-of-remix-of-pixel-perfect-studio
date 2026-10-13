@@ -4,7 +4,7 @@ import { Element, type DOMNode } from "html-react-parser";
 export function collectionLimit(node: Element): number | undefined {
   const cls = (node.attribs["class"] ?? "").split(/\s+/);
   if (cls.includes("events")) return 12;
-  if (cls.includes("awards")) return 8;
+  if (cls.includes("awards")) return 12;
   if (cls.includes("timeline")) return 8;
   if (cls.includes("box-ordered")) return 6;
   if (node.name === "ul" && node.parent instanceof Element && node.parent.attribs["id"] === "grid-container") return 12;

@@ -79,9 +79,19 @@
 .reference-site .ui-to-top{border:0;cursor:pointer}
 .reference-about .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-founder .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-management .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-scientists .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-business-collaboration .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-business-opportunity .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-awards .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-milestones .rd-nav-item:nth-child(2)>.rd-nav-link{color:var(--primary)}
 .reference-scientists #profile>.container>.col-lg-12{padding:0 15px}
-.reference-awards .awards{display:flex;flex-wrap:wrap}
-.reference-awards .awards>div{margin:0}
-.reference-awards .awards img{margin:20px 0}
+.reference-awards .reference-banner{clip-path:ellipse(85% 100% at 50% 0%)}
+.reference-awards #profile{padding:42px 0 56px}
+.reference-awards #profile::before,.reference-awards #profile::after{display:none}
+.reference-awards #profile>.container{max-width:1080px}
+.reference-awards #profile h2.h-bold{font:400 44px/1.25 Lato,sans-serif;color:var(--muted-foreground);margin:0 0 22px!important}
+.reference-awards #profile h1.page-title{font:400 12px/1.7 Lato,sans-serif;color:var(--muted-foreground);margin:0 0 56px}
+.reference-awards #profile .row{margin:0}
+.reference-awards .awards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 28px;padding:0}
+.reference-awards .awards>div{margin:0;padding:0;width:auto;max-width:none;min-width:0}
+.reference-awards .awards a{display:block}
+.reference-awards .awards img{display:block;width:100%;height:auto;margin:0;aspect-ratio:454/768;object-fit:contain;border-radius:0}
+.reference-awards .awards a:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
+@media(max-width:767px){.reference-awards #profile{padding:28px 20px 36px}.reference-awards #profile h2.h-bold{font-size:32px;margin-bottom:14px!important}.reference-awards #profile h1.page-title{margin-bottom:30px}.reference-awards .awards{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}.reference-awards .awards>div{width:auto}}
 .reference-milestones #profile .timeline-title{font:400 18px/1.5 Poppins,sans-serif;margin:0}
 .reference-milestones #profile .timeline-body p{line-height:1.8}
 @media(min-width:980px){.reference-about .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-founder .rd-nav-item:nth-child(2)>.rd-nav-link,.reference-management .rd-nav-item:nth-child(2)>.rd-nav-link{color:var(--primary)}}
@@ -105,7 +115,7 @@
 .reference-photo-gallery .cbp-caption img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .reference-photo-gallery .cbp-caption-activeWrap{position:absolute;inset:0;background:var(--reference-overlay);display:grid;place-items:center;opacity:0;transition:opacity .2s}
 .reference-photo-gallery .cbp-caption:hover .cbp-caption-activeWrap{opacity:1}
-@media(max-width:767px){.reference-photo-gallery #grid-container>ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 15px}.reference-awards .awards>div{width:50%}}
+@media(max-width:767px){.reference-photo-gallery #grid-container>ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 15px}}
 /* Video gallery thumbnails (replace embedded players) */
 .reference-video-gallery .embed-responsive { position: relative; overflow: hidden; }
 .reference-video { position: absolute; inset: 0; display: block; }
@@ -164,6 +174,5 @@
 .reference-news-events .events .card h4{font-size:18px;line-height:1.4;padding:0 16px}
 .reference-news-events .events .card p{padding:0 16px}
 .reference-news-events .events .card>div{padding:0 16px 16px}
-.reference-awards .awards img{aspect-ratio:1;object-fit:cover;border-radius:4px}
 .reference-site .box-ordered{row-gap:24px}
 .reference-site img.reference-service-image{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:4px}
