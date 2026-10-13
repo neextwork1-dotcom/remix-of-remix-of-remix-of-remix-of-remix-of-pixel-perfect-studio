@@ -68,7 +68,8 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       if (limit && collectionGroups(node).length > limit) return <CompactCollection node={node} options={options} limit={limit} />;
       if (node.name === "img") {
         const service = /\/service-\d{2}[.-]/.test(attrs["src"] ?? "");
-        return <img {...attributesToProps(attrs)} className={`${cls}${service ? " reference-service-image" : ""}`} width={service ? 1920 : attrs["width"] ? Number(attrs["width"]) : undefined} height={service ? 1080 : attrs["height"] ? Number(attrs["height"]) : undefined} alt={attrs["alt"] ?? ""} loading="lazy" decoding="async" />;
+        const px = (v?: string) => v && /^\d+$/.test(v) ? Number(v) : undefined;
+        return <img {...attributesToProps(attrs)} className={`${cls}${service ? " reference-service-image" : ""}`} width={service ? 1920 : px(attrs["width"])} height={service ? 1080 : px(attrs["height"])} alt={attrs["alt"] ?? ""} loading="lazy" decoding="async" />;
       }
       if (cls === "box" && attrs["data-toggle"] === "modal") {
         const image = node.children.find(n => n instanceof Element && n.name === "img");
