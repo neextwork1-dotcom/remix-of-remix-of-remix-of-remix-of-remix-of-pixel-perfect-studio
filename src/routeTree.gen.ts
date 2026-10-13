@@ -10,33 +10,349 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as BusinessCenterRouteImport } from './routes/business-center'
+import { Route as BusinessCollaborationRouteImport } from './routes/business-collaboration'
+import { Route as BusinessOpportunityRouteImport } from './routes/business-opportunity'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CrystalCellRouteImport } from './routes/crystal-cell'
+import { Route as DoubleStemcellRouteImport } from './routes/double-stemcell'
+import { Route as FaqGeneralRouteImport } from './routes/faq-general'
+import { Route as FaqProductRouteImport } from './routes/faq-product'
+import { Route as FaqReturnGoodsRouteImport } from './routes/faq-return-goods'
+import { Route as FounderRouteImport } from './routes/founder'
+import { Route as HalalCertificatesRouteImport } from './routes/halal-certificates'
+import { Route as JoinUsRouteImport } from './routes/join-us'
+import { Route as LatestEventRouteImport } from './routes/latest-event'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as MilestonesRouteImport } from './routes/milestones'
+import { Route as NewsEventsRouteImport } from './routes/news-events'
+import { Route as PhotoGalleryRouteImport } from './routes/photo-gallery'
+import { Route as ProductVideosRouteImport } from './routes/product-videos'
+import { Route as ScientistsRouteImport } from './routes/scientists'
+import { Route as SeniorManagementRouteImport } from './routes/senior-management'
+import { Route as TripleStemcellH2oRouteImport } from './routes/triple-stemcell-h2o'
+import { Route as VideoGalleryRouteImport } from './routes/video-gallery'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessCenterRoute = BusinessCenterRouteImport.update({
+  id: '/business-center',
+  path: '/business-center',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessCollaborationRoute = BusinessCollaborationRouteImport.update({
+  id: '/business-collaboration',
+  path: '/business-collaboration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessOpportunityRoute = BusinessOpportunityRouteImport.update({
+  id: '/business-opportunity',
+  path: '/business-opportunity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrystalCellRoute = CrystalCellRouteImport.update({
+  id: '/crystal-cell',
+  path: '/crystal-cell',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoubleStemcellRoute = DoubleStemcellRouteImport.update({
+  id: '/double-stemcell',
+  path: '/double-stemcell',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqGeneralRoute = FaqGeneralRouteImport.update({
+  id: '/faq-general',
+  path: '/faq-general',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqProductRoute = FaqProductRouteImport.update({
+  id: '/faq-product',
+  path: '/faq-product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqReturnGoodsRoute = FaqReturnGoodsRouteImport.update({
+  id: '/faq-return-goods',
+  path: '/faq-return-goods',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FounderRoute = FounderRouteImport.update({
+  id: '/founder',
+  path: '/founder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HalalCertificatesRoute = HalalCertificatesRouteImport.update({
+  id: '/halal-certificates',
+  path: '/halal-certificates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JoinUsRoute = JoinUsRouteImport.update({
+  id: '/join-us',
+  path: '/join-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LatestEventRoute = LatestEventRouteImport.update({
+  id: '/latest-event',
+  path: '/latest-event',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MilestonesRoute = MilestonesRouteImport.update({
+  id: '/milestones',
+  path: '/milestones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsEventsRoute = NewsEventsRouteImport.update({
+  id: '/news-events',
+  path: '/news-events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotoGalleryRoute = PhotoGalleryRouteImport.update({
+  id: '/photo-gallery',
+  path: '/photo-gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductVideosRoute = ProductVideosRouteImport.update({
+  id: '/product-videos',
+  path: '/product-videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScientistsRoute = ScientistsRouteImport.update({
+  id: '/scientists',
+  path: '/scientists',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeniorManagementRoute = SeniorManagementRouteImport.update({
+  id: '/senior-management',
+  path: '/senior-management',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TripleStemcellH2oRoute = TripleStemcellH2oRouteImport.update({
+  id: '/triple-stemcell-h2o',
+  path: '/triple-stemcell-h2o',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VideoGalleryRoute = VideoGalleryRouteImport.update({
+  id: '/video-gallery',
+  path: '/video-gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/awards': typeof AwardsRoute
+  '/business-center': typeof BusinessCenterRoute
+  '/business-collaboration': typeof BusinessCollaborationRoute
+  '/business-opportunity': typeof BusinessOpportunityRoute
+  '/contact': typeof ContactRoute
+  '/crystal-cell': typeof CrystalCellRoute
+  '/double-stemcell': typeof DoubleStemcellRoute
+  '/faq-general': typeof FaqGeneralRoute
+  '/faq-product': typeof FaqProductRoute
+  '/faq-return-goods': typeof FaqReturnGoodsRoute
+  '/founder': typeof FounderRoute
+  '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
+  '/latest-event': typeof LatestEventRoute
+  '/login': typeof LoginRoute
+  '/milestones': typeof MilestonesRoute
+  '/news-events': typeof NewsEventsRoute
+  '/photo-gallery': typeof PhotoGalleryRoute
+  '/product-videos': typeof ProductVideosRoute
+  '/scientists': typeof ScientistsRoute
+  '/senior-management': typeof SeniorManagementRoute
+  '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
+  '/video-gallery': typeof VideoGalleryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/awards': typeof AwardsRoute
+  '/business-center': typeof BusinessCenterRoute
+  '/business-collaboration': typeof BusinessCollaborationRoute
+  '/business-opportunity': typeof BusinessOpportunityRoute
+  '/contact': typeof ContactRoute
+  '/crystal-cell': typeof CrystalCellRoute
+  '/double-stemcell': typeof DoubleStemcellRoute
+  '/faq-general': typeof FaqGeneralRoute
+  '/faq-product': typeof FaqProductRoute
+  '/faq-return-goods': typeof FaqReturnGoodsRoute
+  '/founder': typeof FounderRoute
+  '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
+  '/latest-event': typeof LatestEventRoute
+  '/login': typeof LoginRoute
+  '/milestones': typeof MilestonesRoute
+  '/news-events': typeof NewsEventsRoute
+  '/photo-gallery': typeof PhotoGalleryRoute
+  '/product-videos': typeof ProductVideosRoute
+  '/scientists': typeof ScientistsRoute
+  '/senior-management': typeof SeniorManagementRoute
+  '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
+  '/video-gallery': typeof VideoGalleryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/awards': typeof AwardsRoute
+  '/business-center': typeof BusinessCenterRoute
+  '/business-collaboration': typeof BusinessCollaborationRoute
+  '/business-opportunity': typeof BusinessOpportunityRoute
+  '/contact': typeof ContactRoute
+  '/crystal-cell': typeof CrystalCellRoute
+  '/double-stemcell': typeof DoubleStemcellRoute
+  '/faq-general': typeof FaqGeneralRoute
+  '/faq-product': typeof FaqProductRoute
+  '/faq-return-goods': typeof FaqReturnGoodsRoute
+  '/founder': typeof FounderRoute
+  '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
+  '/latest-event': typeof LatestEventRoute
+  '/login': typeof LoginRoute
+  '/milestones': typeof MilestonesRoute
+  '/news-events': typeof NewsEventsRoute
+  '/photo-gallery': typeof PhotoGalleryRoute
+  '/product-videos': typeof ProductVideosRoute
+  '/scientists': typeof ScientistsRoute
+  '/senior-management': typeof SeniorManagementRoute
+  '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
+  '/video-gallery': typeof VideoGalleryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/awards'
+    | '/business-center'
+    | '/business-collaboration'
+    | '/business-opportunity'
+    | '/contact'
+    | '/crystal-cell'
+    | '/double-stemcell'
+    | '/faq-general'
+    | '/faq-product'
+    | '/faq-return-goods'
+    | '/founder'
+    | '/halal-certificates'
+    | '/join-us'
+    | '/latest-event'
+    | '/login'
+    | '/milestones'
+    | '/news-events'
+    | '/photo-gallery'
+    | '/product-videos'
+    | '/scientists'
+    | '/senior-management'
+    | '/triple-stemcell-h2o'
+    | '/video-gallery'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/awards'
+    | '/business-center'
+    | '/business-collaboration'
+    | '/business-opportunity'
+    | '/contact'
+    | '/crystal-cell'
+    | '/double-stemcell'
+    | '/faq-general'
+    | '/faq-product'
+    | '/faq-return-goods'
+    | '/founder'
+    | '/halal-certificates'
+    | '/join-us'
+    | '/latest-event'
+    | '/login'
+    | '/milestones'
+    | '/news-events'
+    | '/photo-gallery'
+    | '/product-videos'
+    | '/scientists'
+    | '/senior-management'
+    | '/triple-stemcell-h2o'
+    | '/video-gallery'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/awards'
+    | '/business-center'
+    | '/business-collaboration'
+    | '/business-opportunity'
+    | '/contact'
+    | '/crystal-cell'
+    | '/double-stemcell'
+    | '/faq-general'
+    | '/faq-product'
+    | '/faq-return-goods'
+    | '/founder'
+    | '/halal-certificates'
+    | '/join-us'
+    | '/latest-event'
+    | '/login'
+    | '/milestones'
+    | '/news-events'
+    | '/photo-gallery'
+    | '/product-videos'
+    | '/scientists'
+    | '/senior-management'
+    | '/triple-stemcell-h2o'
+    | '/video-gallery'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AwardsRoute: typeof AwardsRoute
+  BusinessCenterRoute: typeof BusinessCenterRoute
+  BusinessCollaborationRoute: typeof BusinessCollaborationRoute
+  BusinessOpportunityRoute: typeof BusinessOpportunityRoute
+  ContactRoute: typeof ContactRoute
+  CrystalCellRoute: typeof CrystalCellRoute
+  DoubleStemcellRoute: typeof DoubleStemcellRoute
+  FaqGeneralRoute: typeof FaqGeneralRoute
+  FaqProductRoute: typeof FaqProductRoute
+  FaqReturnGoodsRoute: typeof FaqReturnGoodsRoute
+  FounderRoute: typeof FounderRoute
+  HalalCertificatesRoute: typeof HalalCertificatesRoute
+  JoinUsRoute: typeof JoinUsRoute
+  LatestEventRoute: typeof LatestEventRoute
+  LoginRoute: typeof LoginRoute
+  MilestonesRoute: typeof MilestonesRoute
+  NewsEventsRoute: typeof NewsEventsRoute
+  PhotoGalleryRoute: typeof PhotoGalleryRoute
+  ProductVideosRoute: typeof ProductVideosRoute
+  ScientistsRoute: typeof ScientistsRoute
+  SeniorManagementRoute: typeof SeniorManagementRoute
+  TripleStemcellH2oRoute: typeof TripleStemcellH2oRoute
+  VideoGalleryRoute: typeof VideoGalleryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +364,203 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-center': {
+      id: '/business-center'
+      path: '/business-center'
+      fullPath: '/business-center'
+      preLoaderRoute: typeof BusinessCenterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-collaboration': {
+      id: '/business-collaboration'
+      path: '/business-collaboration'
+      fullPath: '/business-collaboration'
+      preLoaderRoute: typeof BusinessCollaborationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-opportunity': {
+      id: '/business-opportunity'
+      path: '/business-opportunity'
+      fullPath: '/business-opportunity'
+      preLoaderRoute: typeof BusinessOpportunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crystal-cell': {
+      id: '/crystal-cell'
+      path: '/crystal-cell'
+      fullPath: '/crystal-cell'
+      preLoaderRoute: typeof CrystalCellRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/double-stemcell': {
+      id: '/double-stemcell'
+      path: '/double-stemcell'
+      fullPath: '/double-stemcell'
+      preLoaderRoute: typeof DoubleStemcellRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq-general': {
+      id: '/faq-general'
+      path: '/faq-general'
+      fullPath: '/faq-general'
+      preLoaderRoute: typeof FaqGeneralRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq-product': {
+      id: '/faq-product'
+      path: '/faq-product'
+      fullPath: '/faq-product'
+      preLoaderRoute: typeof FaqProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq-return-goods': {
+      id: '/faq-return-goods'
+      path: '/faq-return-goods'
+      fullPath: '/faq-return-goods'
+      preLoaderRoute: typeof FaqReturnGoodsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/founder': {
+      id: '/founder'
+      path: '/founder'
+      fullPath: '/founder'
+      preLoaderRoute: typeof FounderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/halal-certificates': {
+      id: '/halal-certificates'
+      path: '/halal-certificates'
+      fullPath: '/halal-certificates'
+      preLoaderRoute: typeof HalalCertificatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/join-us': {
+      id: '/join-us'
+      path: '/join-us'
+      fullPath: '/join-us'
+      preLoaderRoute: typeof JoinUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/latest-event': {
+      id: '/latest-event'
+      path: '/latest-event'
+      fullPath: '/latest-event'
+      preLoaderRoute: typeof LatestEventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/milestones': {
+      id: '/milestones'
+      path: '/milestones'
+      fullPath: '/milestones'
+      preLoaderRoute: typeof MilestonesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news-events': {
+      id: '/news-events'
+      path: '/news-events'
+      fullPath: '/news-events'
+      preLoaderRoute: typeof NewsEventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photo-gallery': {
+      id: '/photo-gallery'
+      path: '/photo-gallery'
+      fullPath: '/photo-gallery'
+      preLoaderRoute: typeof PhotoGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product-videos': {
+      id: '/product-videos'
+      path: '/product-videos'
+      fullPath: '/product-videos'
+      preLoaderRoute: typeof ProductVideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scientists': {
+      id: '/scientists'
+      path: '/scientists'
+      fullPath: '/scientists'
+      preLoaderRoute: typeof ScientistsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/senior-management': {
+      id: '/senior-management'
+      path: '/senior-management'
+      fullPath: '/senior-management'
+      preLoaderRoute: typeof SeniorManagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/triple-stemcell-h2o': {
+      id: '/triple-stemcell-h2o'
+      path: '/triple-stemcell-h2o'
+      fullPath: '/triple-stemcell-h2o'
+      preLoaderRoute: typeof TripleStemcellH2oRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/video-gallery': {
+      id: '/video-gallery'
+      path: '/video-gallery'
+      fullPath: '/video-gallery'
+      preLoaderRoute: typeof VideoGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AwardsRoute: AwardsRoute,
+  BusinessCenterRoute: BusinessCenterRoute,
+  BusinessCollaborationRoute: BusinessCollaborationRoute,
+  BusinessOpportunityRoute: BusinessOpportunityRoute,
+  ContactRoute: ContactRoute,
+  CrystalCellRoute: CrystalCellRoute,
+  DoubleStemcellRoute: DoubleStemcellRoute,
+  FaqGeneralRoute: FaqGeneralRoute,
+  FaqProductRoute: FaqProductRoute,
+  FaqReturnGoodsRoute: FaqReturnGoodsRoute,
+  FounderRoute: FounderRoute,
+  HalalCertificatesRoute: HalalCertificatesRoute,
+  JoinUsRoute: JoinUsRoute,
+  LatestEventRoute: LatestEventRoute,
+  LoginRoute: LoginRoute,
+  MilestonesRoute: MilestonesRoute,
+  NewsEventsRoute: NewsEventsRoute,
+  PhotoGalleryRoute: PhotoGalleryRoute,
+  ProductVideosRoute: ProductVideosRoute,
+  ScientistsRoute: ScientistsRoute,
+  SeniorManagementRoute: SeniorManagementRoute,
+  TripleStemcellH2oRoute: TripleStemcellH2oRoute,
+  VideoGalleryRoute: VideoGalleryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

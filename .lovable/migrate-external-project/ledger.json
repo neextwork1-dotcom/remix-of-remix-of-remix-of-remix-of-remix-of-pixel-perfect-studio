@@ -1,0 +1,68 @@
+{
+  "source": "github",
+  "capabilities": [
+    {
+      "capability": "code and routes",
+      "source": "TanStack Start; 25 content routes plus login",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "schema and records",
+      "source": "Static reference content; no application database",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "auth identities and authorization",
+      "source": "Nonfunctional login form; external member portal link",
+      "outcome": "preserve source behavior",
+      "status": "source_limitation",
+      "next_action": "Real sign-in is not implemented in source"
+    },
+    {
+      "capability": "forms",
+      "source": "Contact and registration forms prevent submission",
+      "outcome": "preserve source behavior",
+      "status": "source_limitation",
+      "next_action": "Message delivery and registration need a separate implementation request"
+    },
+    {
+      "capability": "uploaded file bytes and media",
+      "source": "Bundled imagery and cross-project CDN pointers",
+      "outcome": "rehost and improve each referenced image",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "external providers and video",
+      "source": "External links and video embeds",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "public endpoints callbacks webhooks schedules secrets",
+      "source": "No server integrations detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": null
+    },
+    {
+      "capability": "cutover",
+      "source": "Unpublished destination",
+      "outcome": "not_requested",
+      "status": "not_applicable",
+      "next_action": null
+    },
+    {
+      "capability": "verification",
+      "source": "Source pages and browser interactions",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": null
+    }
+  ]
+}
