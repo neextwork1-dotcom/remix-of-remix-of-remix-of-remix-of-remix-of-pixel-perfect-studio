@@ -1,10 +1,19 @@
 // @vitest-environment node
 import { describe, expect, it } from "vitest";
-import { htmlToDOM, Element } from "html-react-parser";
+import { htmlToDOM, Element, type DOMNode } from "html-react-parser";
 import { collectionGroups, collectionLimit } from "@/lib/content-density";
 
 function element(html: string) {
-  const node = htmlToDOM(html)[0];
+  // Parser dependencies can carry separate Element constructors in the test runner.
+  const normalize = (node: DOMNode): DOMNode => {
+    if ('name' in node && 'attribs' in node && 'children' in node) {
+      return new Element(node.name, node.attribs, node.children.map(child => normalize(child as DOMNode)));
+    }
+    return node;
+  };
+  const first = htmlToDOM(html)[0];
+  if (!first) throw new Error("Expected element");
+  const node = normalize(first as DOMNode);
   if (!(node instanceof Element)) throw new Error("Expected element");
   return node;
 }
