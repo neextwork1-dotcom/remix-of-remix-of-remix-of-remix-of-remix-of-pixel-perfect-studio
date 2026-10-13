@@ -115,7 +115,7 @@
 .reference-photo-gallery .cbp-caption img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .reference-photo-gallery .cbp-caption-activeWrap{position:absolute;inset:0;background:var(--reference-overlay);display:grid;place-items:center;opacity:0;transition:opacity .2s}
 .reference-photo-gallery .cbp-caption:hover .cbp-caption-activeWrap{opacity:1}
-@media(max-width:767px){.reference-photo-gallery #grid-container>ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 15px}.reference-awards .awards>div{width:50%}}
+@media(max-width:767px){.reference-photo-gallery #grid-container>ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 15px}}
 /* Video gallery thumbnails (replace embedded players) */
 .reference-video-gallery .embed-responsive { position: relative; overflow: hidden; }
 .reference-video { position: absolute; inset: 0; display: block; }
